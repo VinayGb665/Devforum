@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<head>
+	<title>Profile</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+			;
+		}
+		body{
+			font-family:"Lucida Console", Monaco, monospace;
+			background:url(12345.jpg);
+			background-repeat:no-repeat;
+			background-size:cover;
+			background-attachment: fixed;
+			padding:20px;
+		}
+		#info_wrap{
+			position:absolute;
+			height:20%;
+			width:92%;
+			padding:2%;
+			padding-bottom:3%;
+			line-height:1.5;
+			background-color: rgba(5,52,86,0.8);
+		}
+		
+		#info_wrap img{
+			position:absolute;
+			left:10%;
+			height:120px;
+			width:120px;
+			border:1px solid black;
+			border-radius:50%;
+		}
+		#text{
+			position:absolute;
+			width:60%;
+			left:30%;
+		}
+		#text span{
+			font-size:20px;
+			color:white;
+		}
+		hr{
+			border:1px solid green;
+			margin-bottom:3px;
+			margin-top:3px;
+		}
+		#other_wrap{
+			position:absolute;
+			top:36%;
+			min-height:10px;
+			width:92%;
+			margin:2% 0 0 0;
+			padding:2%;
+			background-color: rgba(5,52,86,0.7);
+			font-size:20px;
+			color:white;
+			line-height:1.5;
+		}
+		#other_wrap table{
+			border-spacing:20px;
+		}
+		#other_wrap td{
+			text-align:center;
+			min-width:100px;
+			color:black;
+			background-color:#ccc;
+			border:1px solid black;
+			border-radius:5px;
+		}
+		#other_wrap li img{
+			height:50px;
+			weight:50px;
+		}
+		#other_wrap ul li{
+			display:inline-block;
+			height:5px;
+			weight:5px;
+		}
+	</style>
+</head>
+<body>
+	<div id = "info_wrap">
+		<img src = "icon.png"></img>
+		<div id = "text">
+		<span>Name</span><br><hr>
+		<span>Email</span><br><hr>
+		<span>Phone</span><br><hr>
+		<span>Age</span><br><hr>
+		</div>
+	</div>
+	<div id = "other_wrap">
+		<h1>Medals</h1>
+		<ul>
+			<li><img src = "medal1.png"></img></li>
+			<li><img src = "medal2.png"></img></li>
+			<li><img src = "medal3.png"></img></li>
+		</ul><hr>
+		<h1>Interests</h1>
+		<table>
+			<tr>
+				<td>Python</td>
+				<td>C</td>
+				<td>Java</td>
+				<td>HTML</td>
+			</tr>
+			<tr>
+				<td>Javascript</td>
+				<td>PHP</td>
+				<td>SQL</td>
+				<td>HTML</td>
+			</tr>
+		</table><hr>
+		<h1>Other Projects</h1>
+		<p>
+		The core of extensible programming is defining functions. 
+		Python allows mandatory and optional arguments,
+		keyword arguments, and even arbitrary argument lists. 
+		More about defining functions in Python 3
+		</p><hr>
+		<p>
+		The core of extensible programming is defining functions. 
+		Python allows mandatory and optional arguments,
+		keyword arguments, and even arbitrary argument lists. 
+		More about defining functions in Python 3
+		</p><hr>
+		<p>
+		The core of extensible programming is defining functions. 
+		Python allows mandatory and optional arguments,
+		keyword arguments, and even arbitrary argument lists. 
+		More about defining functions in Python 3
+		</p><hr>
+	</div>
+	
+</body>

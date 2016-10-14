@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+
+
+</script>
+	<title>Our Website</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Oxygen+Mono" rel="stylesheet">
+	<style>
+	*{
+		margin:0px;
+		padding:0px;
+		border:none;
+		
+	}
+	body{
+		font-family: 'Roboto Condensed', sans-serif;
+		font-size:21px;
+		background:url(img/12345.jpg);
+		background-repeat:no-repeat;
+		background-size:cover;
+		background-attachment: fixed;
+	}
+	<!--#nav{
+		width:100%;
+		height:600px;
+		background:url(123.jpg);
+		background-size:cover;
+	}-->
+	<!--#nav_wrapper{
+		display:table;
+		position:fixed;
+		top:10%;
+		height:7.5%;
+		width:100%;
+		background:#053456;
+		opacity:0.7;
+	}-->
+	ul {
+		list-style-type: none;
+		background-color: #053456;
+		width:100%;
+		height:7.5%;
+		position:fixed;
+		top:10%;
+		opacity:0.7;	
+	}
+	li{
+		display:inline-table;
+		float:left;
+		height:100%;
+		width:16.6666%;
+		font-weight:bold;
+		text-align:center;
+	}
+	li a{
+		display:table-cell;
+		height:100%;
+		width:100%;
+		vertical-align:middle;
+		color:white;
+		text-decoration:none;
+	}
+	li:hover{
+		background-color:green;
+		transition:all 0.7s;
+		opactiy:0.5;
+	}
+	<!--#nav_wrapper ul li{
+		display:inline;
+		font-wight:bold;
+		width:100%;
+		height:100%;
+		margin:0px;
+		border:1px solid;
+	}
+	#nav_wrapper a{
+		position:relative;
+		color:white; 
+		text-decoration:none;
+	}
+	#nav_wrapper a:hover{
+		display:block;
+		background-color:red;
+		transition:all 0.7s;
+		opacity:0.5;
+	}-->
+	#sign_wrap{
+		position:absolute;
+		top:40%;
+		left:70%;
+		padding:1%;
+		min-height:50px;
+		min-width:200px;
+		border-radius:2px;
+		background-color:#053456;
+		opacity:0.7;
+	}
+	#sign_wrap input{
+		display:block;
+		height:50px;
+		width:90%;
+		font-size:23px;
+		margin:auto;
+		margin-top:5%;
+		margin-bottom:5%;
+		font-family:'Montserrat';
+		border:2px solid #053456;
+		border-radius:5px;	
+	}
+	#sign_wrap a{
+		display:inline-block;
+		float:left;
+		margin:auto;
+		text-align:center;
+		text-decoration:none;
+		padding:5px;
+		color:cyan;
+	}
+	#sign_wrap a:hover{
+		color:white;
+		
+	}
+	#sign_wrap input:focus{
+		border:2px solid green;
+	}
+	#butt{
+		display:block;
+		height:50px;
+		width:90%;
+		font-family: 'Oxygen Mono', monospace;
+		border-radius:5px;
+		margin:auto;
+		margin-top:5%;
+		margin-bottom:5%;
+		background-color:green;
+		font-size:25px;
+		font-weight:bolder;
+	}
+	#butt:hover{
+		background:yellow;
+		transition:ease-in 0.5s;
+	}
+	#para_wrap{
+		font-family:"Comic Sans MS", cursive, sans-serif;
+		position:absolute;
+		font-size:30px;
+		color:white;
+		left:10%;
+		top:40%;
+	}
+	</style>
+</head>
+
+<body>
+	<br>
+	<ul>
+		<li ><a href="homepage.html">Home</a></li>
+		<li ><a href="askquestion.php">Topics</a></a></li>
+		<li ><a href="#">My Projects</a></li>
+		<li ><a href="#">Downloads</a></li>
+		<li ><a href="#">Example</a></li>
+		<li ><a href="#">About</a></li>
+	</ul> 
+	
+	<div id = "para_wrap">
+	<p><h2>How people build software</h2><br>
+	Millions of developers use GitHub <br>to build personal projects, <br>
+	support their businesses, and work<br> together on open source technologies.</p>
+	</div>
+	<div id="sign_wrap">
+		<form action="profile/ProfilePage.html">
+			<input type="text" placeholder="Username"></input>
+			<input type="password" placeholder="Password"></input>
+			<button id="butt" >Go</button>
+			<a style="border-right:2px solid white;" href="signup.html">New User? Sign Up</a>
+			<a href="#">Forgot password</a>
+		</form>
+	</div>
+</body>
+</html>

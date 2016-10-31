@@ -1,7 +1,10 @@
 <?php
 session_start();
-if (session_status() == PHP_SESSION_NONE) {session_start();echo('adfds');}
-//if($_SESSION['loggedin']!=true) echo('Get The fuck out and sign up');
+//if (session_status() == PHP_SESSION_NONE) {session_start();echo('adfds');}
+if($_SESSION['loggedin']!=true) { header('Location:signin.html');}
+$user=$_SESSION['user'];
+echo($user);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -265,8 +268,9 @@ document.getElementById('instructions').style.visibility='hidden';
 		<input id="tit" name="title" label="Title"  placeholder="What's your programming question? Be specific	" type="text"/>
 		
         <textarea class="wmd-input" onFocus="ii();" name="question" id="ask_question_body"></textarea>
-		<input id="sub" type="submit"/>		
+		<input id="sub" type="submit"/>	
 		</form>
+
             </div>
 
     <div id="wmd-preview" class="wmd-panel wmd-preview"></div>

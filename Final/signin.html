@@ -3,6 +3,14 @@
 <head>
 <title>Our Website</title>
 <style>
+a{
+text-decoration:none;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+		font-size:20px;
+		position:relative;
+		top:500px;
+		left:800px;
+}
 body{
 
 
@@ -42,7 +50,7 @@ body{
 		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 		font-size:21px;
 		position:absolute;
-		top:280px;
+		top:140px;
 		left:82px;
 		z-index:999;
 		width:150px;
@@ -127,22 +135,21 @@ body{
 	</script>
 </head>
 <body  >
-<div id="container"><h1 ><center>Sign Up</center></h1>
+<div id="container"><h1 ><center>Sign In</center></h1>
 
 <div id="signup">
 
-<form action="php/	signup.php" onsubmit="return validate()"  name="details" method="POST">
-<input type="text" placeholder="First Name" name="name" maxlength="52"></br></input>
+<form action="php/signin.php" onsubmit="return validate()"  name="details" method="POST">
+
 <input type="text" pattern="[^ @]*@[^ @]*" placeholder="Email Id" name="email" maxlength="52"></br></input>
 <input type="password" placeholder="Password" name="pass" maxlength="52"></br></input>
-<input type="password" placeholder="Confirm Password" name="cpass" maxlength="52"></br></input>
 <div id="message"></div>
-<button id="butt">Confirm</button>
+<button id="butt">Go</button>
 </form>
 
 
 </div>
 </div>
-
+<a href="signup.html">Not a user ?Click here to register</a>
 </body>
 </body></html>

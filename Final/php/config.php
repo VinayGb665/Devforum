@@ -5,8 +5,6 @@ $dbpass = 'root';
 
 $conn = mysql_connect($dbhost, $dbuser, $dbpass) or die('Error connecting to mysql');
 
-$dbname = 'questions';
-$sel = mysql_select_db($dbname) or die('Error conn to database');
 
 
 function mysql_unreal_escape_string($string) {
@@ -20,6 +18,18 @@ $string = substr_replace($string, $o_chars[$index], $i, strlen($char) + 1);
   break;
     } } } }
     return $string;
-}				
+}
+
+
+
+
+
+
+
+
+
+
+
+				
 ?>
 

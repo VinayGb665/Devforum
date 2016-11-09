@@ -3,7 +3,7 @@ session_start();
 //if (session_status() == PHP_SESSION_NONE) {session_start();echo('adfds');}
 if($_SESSION['loggedin']!=true) { header('Location:signin.html');}
 $user=$_SESSION['user'];
-echo($user);
+//echo($user);
 
 ?>
 <!DOCTYPE html>
@@ -195,16 +195,14 @@ left:-90px;
 	<div id="nav_wrapper" > <br>
 <ul>
 <li ><a href="Homepage.html" >Home</a></li>
-<li class="active" ><a href="#">Topics</a></a></li>
-<li ><a href="#">Projects</a></li>
-<li ><a href="#">Downloads</a></li>
+<li class="active"><a href="#">Topics</a></a></li>
+<li ><a href="ProjPrev/ProjPrev.php">Projects</a></li>
+<li ><a href="QPrev/QPrev.php">Questions</a></li>
 <li ><a href="#">Example</a></li>
-<li ><a href="#">About</a></li>
 
 
 </ul> </div>
 
-	
 	
 		<div id="instructions">
 <center><h style="font-size:31px;">How to ask</h></center>
@@ -263,11 +261,13 @@ document.getElementById('instructions').style.visibility='hidden';
     <div class="wmd-panel">
         <div id="wmd-button-bar" style="position:absolute;padding-bottom:-1px;"></div>
         <label for="answer_question_body" class="required"></label>
-		<form action="php/questions.php" method="POST">
+		<form action="php/addquest.php" method="POST">
 		<div id="na">Title :</div>
 		<input id="tit" name="title" label="Title"  placeholder="What's your programming question? Be specific	" type="text"/>
 		
         <textarea class="wmd-input" onFocus="ii();" name="question" id="ask_question_body"></textarea>
+		<input type="text" placeholder="Tags" style="width:300px" name="tags"/>
+		
 		<input id="sub" type="submit"/>	
 		</form>
 

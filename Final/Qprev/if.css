@@ -1,0 +1,93 @@
+*{
+      padding: 0;
+      margin: 0;
+      border: 0;
+      font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	  	  font-size:23px;
+    }
+	::-webkit-scrollbar {
+    display: none;
+}
+    body{
+      background-color: white;
+    }
+    #c{
+      position: absolute;
+      height: 100%;
+      width: 100%;
+    }
+    .q{
+      position: relative;
+      box-sizing: border-box;
+      margin: 1%;
+      width: 98%;
+      height: 30%;
+      border:0.00005px solid #D0D3D4;
+      word-wrap: break-word;
+      cursor: pointer;
+    }
+    .q:hover{
+      background: #D5D8DC;
+    }
+    .a{
+      position: absolute;
+      top:0%;
+      right:0%;
+      width: 10%;
+      text-align: center;
+      line-height: 1.5em;
+      height: 6em;
+      pointer-events: none;
+    }
+    .n{
+      font-size: 28px;
+    }
+    .s{
+      font-size: 14px;
+    }
+    .h{
+      position: relative;
+      text-align: center;
+      font-size: 24px;
+      color: green;
+	    width:90%;
+      pointer-events: none;
+    }
+    .d{
+      display: block;
+      position: relative;
+      left: 5%;
+      width: 80%;
+      font-size: 18px;
+      max-height:40%;
+      color: grey;
+      overflow-y: scroll;
+      pointer-events: none;
+    }
+    .tag{
+      position: absolute;
+      left: 1%;
+      bottom: 2%;
+      pointer-events: none;
+    }
+    .tag ul li{
+      display: inline;
+      box-sizing: border-box;
+      background-color: #ADD8E6;
+      padding:0 2px 0 2px;
+      pointer-events: none;
+    }
+    .i{
+      position: absolute;
+      right: 0%;
+      bottom: 0%;
+      height:20%;
+      width:20%;
+      text-align: center;
+      color: #000080;
+      pointer-events: none;
+    }
+    .i li{
+      display: inline;
+      pointer-events: none;
+    }

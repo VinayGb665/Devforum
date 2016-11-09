@@ -1,0 +1,188 @@
+<html>
+<head>
+<script>
+function tt(){var y=document.getElementById('dec');console.log('sfyg');y.style.border='none';}
+
+i=0;
+function inc(){
+var t=document.getElementsByClassName('oo');
+for(i=0;i<t.length;){
+if(t[i].style.display=='none')i++;
+else break; 
+}
+
+console.log(t[0]);
+if(i<t.length-1){
+t[i].style.display='none';
+i++;
+t[i].style.display='block';
+return;
+}
+else{
+t[i].style.display='none';
+
+t[0].style.display='block';
+i=0;
+}
+}
+
+function dec(){
+var t=document.getElementsByClassName('oo');
+for(i=0;i<t.length;){
+if(t[i].style.display=='none')i++;
+else break; 
+}
+console.log(t[0]);
+if(i>0){
+t[i].style.display='none';
+i--;
+t[i].style.display='block';
+return;
+}
+else{
+t[0].style.display='none';
+
+t[t.length-1].style.display='block';
+i=t.length-1;
+}
+}
+
+
+
+
+</script>
+<style>
+
+#nav{
+height:600px;
+position:relative;
+top:100px;
+background-size:cover;
+}
+#nav_wrapper{
+
+z-index:10;
+position:fixed;
+height:100px;
+top:0px;
+width:100%; 	;
+background:#053456;
+pading:10px;
+margin-left:auto;
+margin-right:auto;
+margin-top:10px;
+opacity:0.7;
+}
+#nav_wrapper ul{
+margin-top:20px;
+}
+
+
+
+#nav_wrapper ul li{
+list-style-type:none;
+display:inline;
+font-size:18px;
+padding:15px;
+}
+
+
+
+#nav_wrapper a{
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+font-size:2	1px;
+
+text-align:center;
+color:white;
+margin-top:10px;
+text-decoration:none;
+padding:100px;
+}
+ 
+#nav_wrapper ul li:hover{
+background:red;
+
+transition:all 0.7s;
+opacity:0.5;
+}
+
+
+.active{
+background:#000013;
+}
+
+.oo{
+opacity:1;
+position:relative;
+top:150px;
+left:320px;
+border:2px solid transparent;
+border-radius:5px;
+
+}
+.oo{
+animation:fade-in 1s;
+
+}
+@keyframes fade-in{
+from{opacity:0;}
+to{opacity:1;}
+}
+#dec{
+position:absolute;
+top:335px;
+font-size:23px;
+left:270px;
+width:50px;
+height:50px;
+border: 2px solid #ddd;
+border-radius:50%;
+}
+#inc{
+position:absolute;
+top:335px;
+font-size:23px;
+right:345px;
+width:50px;
+height:50px;
+border: 2px solid #ddd;
+border-radius:50%;
+}
+
+#inc ,#dec:focus{
+outline:0;
+}
+
+</style>
+
+</head>
+<body>
+<div id="nav_wrapper" > <br>
+<ul>
+<li ><a href="Homepage.html" >Home</a></li>
+<li class="active"><a href="#">Topics</a></a></li>
+<li ><a href="ProjPrev/ProjPrev.php">Projects</a></li>
+<li ><a href="QPrev/QPrev.php">Questions</a></li>
+<li ><a href="#">Example</a></li>
+
+
+</ul> </div>
+
+<button id="dec" onclick="dec();" ><</button>
+<img src="img/img1.jpg" style="display:none;"class="oo" width="800px" height="400px"/>
+<img src="img/img2.jpg"  class="oo" width="800px" height="400px"/>
+<img src="img/img3.jpg" style="display:none;" class="oo" width="800px"  height="400px"/>
+
+<button id="inc"onclick="inc();">></button></button>
+
+
+</div>
+
+
+
+
+
+</body>
+
+</html>

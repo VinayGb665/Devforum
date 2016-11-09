@@ -24,7 +24,7 @@ $user=$_SESSION['user'];
 			width:400px;
 			height:400px;
 			position:absolute;
-			top:250px;
+			top:350px;
 			left:1300px;
 			background-color:#e8ecd5;
 			padding:10px;
@@ -33,7 +33,7 @@ font-size:20px;
 		}
 		#file_wrap{
 			position:relative;
-			top:200px;
+			top:300px;
 			left:300px;
 			width:900px;
 			height:500px;
@@ -228,14 +228,31 @@ font-size:15px;
 	background-color:#ccc;
 	
 }
-	</style>
+#title{
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+font-size:18px;
+color:#d5daad;
+	position:absolute;
+	top:-100px;
+	width:400px;
+	height:38px;
+	padding-left:15px;
+border:0.5px solid transparent;
+border-radius:3px;
+background-color:#313047;	
+transition:width 1s ;
+}
+#title:focus{
+	outline:0;
+	width:600px;
+}
+#title:blur{
+	
+	width:600px;
+}
 
-		
-		
-		
-		
-		
-		
+	</style>
+	
 		
     </head>
     <body>
@@ -243,21 +260,22 @@ font-size:15px;
 	
 	<div id="nav_wrapper" > <br>
 <ul>
-<li ><a href="Homepage.html" >Home</a></li>
-<li  ><a href="#">Topics</a></a></li>
-<li class="active" ><a href="#">Projects</a></li>
-<li ><a href="#">Downloads</a></li>
+<li ><a href="index.html" >Home</a></li>
+<li class="active"><a href="#">Topics</a></a></li>
+<li ><a href="ProjPrev/ProjPrev.php">Projects</a></li>
+<li ><a href="QPrev/QPrev.php">Questions</a></li>
 <li ><a href="#">Example</a></li>
-<li ><a href="#">About</a></li>
 
 
 </ul> </div>
+
 	<div id="file_wrap" >
 <img alt="Feature image" style="position:relative;top:200px;left:350px;"draggable="false" height="52" src="img/files-lg.svg" width="204">
 <div id="file">
-        <form enctype="multipart/form-data" action="php/projects.php" method="POST">
-		<textarea id="readme" name="dscription" placeholder="Describe Your Project"></textarea>
-		<input style="visibility:hidden;"  id="haha" multiple="multiple" name="file" type="file"/>
+        <form enctype="multipart/form-data" action="php/addprojects.php" method="POST">
+		<input type="text" id="title" name="title" placeholder="We think your project should have a title"/>
+		<textarea id="readme" name="description" placeholder="Describe Your Project"></textarea>
+		<input style="visibility:hidden;"  id="haha" multiple="multiple" name="file[]" type="file"/>
 		<input id="submit" type="submit"/>
 	</form>	 
 </div>

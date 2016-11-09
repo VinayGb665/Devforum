@@ -6,17 +6,18 @@ $req=md5($pass);
 $dbname="users";
 $db=mysql_select_db($dbname) or die(mysql_error());
 
-$query="SELECT * from credentials where mail='$email'";
+$query="SELECT * from credentials where email='$email'";
 $sl=mysql_query($query);
 if(!$sl) die(mysql_error());
 $row=mysql_fetch_array($sl);
 //echo($row[3]);
 //	echo($req);
-if($row[4]==0) {$show="Please activate your account by verifying your email"; $what="Signin";$where="../signin.html";}
+if($row[5]==0) {$show="Please activate your account by verifying your email"; $what="Signin";$where="../signin.html";}
 else{
 if($row[3]==$req){session_start();
 $_SESSION['loggedin']=true;
-$_SESSION['user']=$row[1];
+$_SESSION['user']=$row[2];
+$_SESSION['uid']=$row[0];
 header("Location:../homepage.html");
 }
 else {

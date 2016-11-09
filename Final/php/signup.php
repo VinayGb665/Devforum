@@ -9,7 +9,7 @@ $db=mysql_select_db($dbname) or die(mysql_error());
 $name=mysql_real_escape_string($_POST['name']);
 $email=mysql_real_escape_string($_POST['email']);
 $pass=md5($_POST['pass']);
-$check="SELECT * FROM credentials WHERE name='$name' OR mail ='$email'";
+$check="SELECT * FROM credentials WHERE name='$name' OR email ='$email'";
 $s=mysql_query($check);
 $count=mysql_num_rows($s);
 if($count!=0){
@@ -17,7 +17,7 @@ if($count!=0){
 	header("Location: ../signup.html");
 }
 
-$query="INSERT INTO credentials (name,mail,pass) VALUES ('$name','$email','$pass')";
+$query="INSERT INTO credentials (email,Name,pass) VALUES ('$email','$name','$pass')";
 $res=mysql_query($query) or die(mysql_error());
 
 
@@ -68,26 +68,24 @@ if($res==true){
                 $mail->Subject = 'Verification Required';
                 $mail->Body    = $message;
             //  $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-
+				
                 if(!$mail->send()) {
-                    echo 'Message could not be sent.';
-                    echo 'Mailer Error: ' . $mail->ErrorInfo;
+                	$show="Mail couldnt be sent please try again";
+	$where="../signup.html";
+	$what ="Signup";
+
                 } else {
-                    echo 'Message has been sent';
-                }
+                    //echo 'Message has been sent';
+                
 				$show="A Confirmation email has been sent to your email adress.";
 $where='../signin.html';
 				$what ="signin";
 				//echo('yuafd');
 				mkdir('../projects/'.$name,0775);
 			//echo chdir('..');
+				}
 				
 				
-}
-else{
-	$show="Mail couldnt be sent please try again";
-	$where="../signup.html";
-	$what ="Signup";
 }
 
 ?>  -->

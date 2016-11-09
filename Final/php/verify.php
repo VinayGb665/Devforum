@@ -7,9 +7,9 @@ $pass=$_GET['pass'];
 $dbname="users";
 $d=mysql_select_db($dbname) or die(mysql_error());
 
-$query="SELECT * FROM credentials where name='$name' AND pass='$pass'";
-$res=mysql_query($query) or die(mysql_eroor());
-$count=mysql_num_rows($res);
+$query="SELECT * FROM credentials where Name='$name' AND pass='$pass'";
+$res=mysql_query($query) or die(mysql_error());
+$count=mysql_num_rows($res) or die(mysql_error());
 echo $count;
 if($count==1) {
 	mysql_query("update credentials set active=1 where name='$name'");

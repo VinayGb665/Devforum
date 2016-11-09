@@ -21,6 +21,32 @@ $string = substr_replace($string, $o_chars[$index], $i, strlen($char) + 1);
 }
 
 
+function zipit($files=array(),$place='',$o_write=false){
+	if(file_exists($place) && !$o_write) return false;
+	
+	$v=array();
+	if(is_array($files)){
+		foreach($files as $f){
+			
+			if(file_exists($f)){
+				$v[]=$f;
+			}
+		}
+	}
+	
+if(count($v)){
+	$archive =new ZipArchive();
+	if($archive->open($place,$o_write? ZIPARCHIVE::OVERWRITE : ZIPARCHIVE::CREATE)!=true) return false;
+	foreach($v as $f){
+		$archive->addFile($f,$f);
+	}
+
+	$archive->close();	
+	return file_exists($place);
+}	
+
+	return false;
+}
 
 
 
